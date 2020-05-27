@@ -8,9 +8,9 @@ The classic space shooter is back to life.
 ![Picture 2]() <br>
 ![Picture 3]() 
 
-## [Check the live version of the game](google.com)
+## [Check the live version of this game](https://ivanderlich-space-shooter.surge.sh)
 
-## Instalation 
+## Instalation
 
   Explanation to run this from zero in a linux system. Clarify it its only been tested working on ubuntu
 
