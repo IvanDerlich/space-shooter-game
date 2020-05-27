@@ -52,6 +52,7 @@
   },
   "dependencies": {
     "eslint-config-airbnb": "^18.1.0",
-    "eslit": "^6.0.0"
+    "eslit": "^6.0.0",
+    "jest": "^26.0.1"
   }
 }
