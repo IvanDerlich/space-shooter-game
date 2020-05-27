@@ -8,25 +8,20 @@
   },
   "scripts": {
     "deploy": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
-    "d":      "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
-    "dn":     "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh",
-
-    "build":  "webpack --mode production && xdg-open ./dist/index.html",
-    "b":      "webpack --mode production && xdg-open ./dist/index.html",
-    "bn":     "webpack --mode production",
-
-    "dev":  "webpack --mode development && xdg-open ./dist/index.html",
-    "q":    "webpack --mode development && xdg-open ./dist/index.html",
-    "qn":   "webpack --mode development",  
-
+    "d": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
+    "dn": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh",
+    "build": "webpack --mode production && xdg-open ./dist/index.html",
+    "b": "webpack --mode production && xdg-open ./dist/index.html",
+    "bn": "webpack --mode production",
+    "dev": "webpack --mode development && xdg-open ./dist/index.html",
+    "q": "webpack --mode development && xdg-open ./dist/index.html",
+    "qn": "webpack --mode development",
     "test": "jest",
-    "t":    "jest",
-
-    "start":  "webpack-dev-server --mode development --open",
-    "s":      "webpack-dev-server --mode development --open",
-
-    "watch":  "webpack --mode production --watch",  
-    "w":      "webpack --mode production --watch"
+    "t": "jest",
+    "start": "webpack-dev-server --mode development --open",
+    "s": "webpack-dev-server --mode development --open",
+    "watch": "webpack --mode production --watch",
+    "w": "webpack --mode production --watch"
   },
   "repository": {
     "type": "git",
@@ -43,6 +38,7 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.3",
+    "eslint-plugin-import": "^2.20.2",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
@@ -55,6 +51,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "eslint-config-airbnb": "^18.1.0",
     "eslit": "^6.0.0"
   }
 }
