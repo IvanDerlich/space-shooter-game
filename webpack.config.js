@@ -23,10 +23,10 @@ const config = {
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: {
-          loader: 'file-loader',
+          loader: 'file-loader?name=/src/assets/[name].[ext]',
           options: {
             name: '[name].[hash].[ext]',
-            outputPath: '',
+            outputPath: 'assets/',
           },
         },
       },
