@@ -18,8 +18,7 @@ The classic space shooter is back to life.
 
   - Microverse: For their support throughout my learning process and for [this guide](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27) wich guided me through the of building this process.
   
-  - The people that created the technologies I'm using listed below. I'm just a dwarf standing on the shoulders of giants.    
-
+  - The people that created the technologies I'm using listed below.
 ## Technologies used
 
   - Webpack
