@@ -16,10 +16,11 @@
     "dev": "webpack --mode development && xdg-open ./dist/index.html",
     "q": "webpack --mode development && xdg-open ./dist/index.html",
     "qn": "webpack --mode development",
+    "qw": "webpack --mode development --watch && xdg-open ./dist/index.html",
     "test": "jest",
     "t": "jest",
     "start": "webpack-dev-server --mode development --open",
-    "s": "webpack-dev-server --mode development --open",
+    "s": "webpack-dev-server --mode development --open",    
     "watch": "webpack --mode production --watch",
     "w": "webpack --mode production --watch"
   },

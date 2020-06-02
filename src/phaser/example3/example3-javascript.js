@@ -1,9 +1,9 @@
-const email = document.getElementById("mail");
+const email = document.getElementById('mail');
 
-email.addEventListener("input", function (event) {
+email.addEventListener('input', (event) => {
   if (email.validity.typeMismatch) {
-     email.setCustomValidity("I am expecting an e-mail address!");
+    email.setCustomValidity('I am expecting an e-mail address!');
   } else {
-    email.setCustomValidity("");
+    email.setCustomValidity('');
   }
 });
