@@ -1,23 +1,20 @@
-## Space Shooter Game
+## Phaser Tutorial
 
-The classic space shooter is back to life.
+This game was made following [This](http://phaser.io/tutorials/making-your-first-phaser-3-game/part1) guide. The guide is about how to use the phaser engine to create games.
 
 ## Demo
-![Video/gif]() <br>
-![Picture 1]() <br>
-![Picture 2]() <br>
-![Picture 3]() 
+![Video/gif](docs/game.gif) <br>
+![Picture 1](docs/index.png) <br>
 
-## [Check the live version of this game](https://ivanderlich-space-shooter.surge.sh)
+## [Check the live version of this game](http://ivanderlich-phaser-tutorial.surge.sh/)
 
 ## Instalation
 
-  Explanation to run this from zero in a linux system. Clarify it its only been tested working on ubuntu
+  This is just a branch for practice. The instalation instructions might be the same or very like the instructions in the master branch
 
 ## Ackowledgments
 
-  - Microverse: For their support throughout my learning process and for [this guide](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27) wich guided me through the of building this process.
-  
+  - Microverse.
   - The people that created the technologies I'm using listed below.
 ## Technologies used
 
