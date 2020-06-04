@@ -10,17 +10,22 @@
     "deploy": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
     "d": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
     "dn": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh",
+
     "build": "webpack --mode production && xdg-open ./dist/index.html",
     "b": "webpack --mode production && xdg-open ./dist/index.html",
     "bn": "webpack --mode production",
+
     "dev": "webpack --mode development && xdg-open ./dist/index.html",
     "q": "webpack --mode development && xdg-open ./dist/index.html",
     "qn": "webpack --mode development",
     "qw": "webpack --mode development --watch && xdg-open ./dist/index.html",
+
     "test": "jest",
     "t": "jest",
+
     "start": "webpack-dev-server --mode development --open",
-    "s": "webpack-dev-server --mode development --open",    
+    "s": "webpack-dev-server --mode development --open",
+    
     "watch": "webpack --mode production --watch",
     "w": "webpack --mode production --watch"
   },
@@ -52,6 +57,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "eslint": "^7.1.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslit": "^6.0.0",
     "jest": "^26.0.1",
