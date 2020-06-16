@@ -1,23 +1,17 @@
-## Phaser Tutorial
+# Phaser 3 Webpack Project Template
 
-This game was made following [This](http://phaser.io/tutorials/making-your-first-phaser-3-game/part1) guide. The guide is about how to use the phaser engine to create games.
+A Phaser 3 Project Template
 
-## Demo
-![Video/gif](docs/game.gif) <br>
-![Picture 1](docs/index.png) <br>
+### Requirements
 
-## [Check the live version of this game](http://ivanderlich-phaser-tutorial.surge.sh/)
+We need [Node.js](https://nodejs.org) to install and run scripts.
 
-## Instalation
+## Install and run
 
-  This is just a branch for practice. The instalation instructions might be the same or very like the instructions in the master branch
+Run next commands in your terminal:
 
-## Ackowledgments
-
-  - Microverse.
-  - The people that created the technologies I'm using listed below.
-## Technologies used
-
-  - Webpack
-  - NPM  
-  - [Phaser](https://phaser.io/)
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install dependencies and launch browser with examples.|
+| `npm start` | Launch browser to show the examples. <br> Press `Ctrl + c` to kill **http-server** process. |
+=======
