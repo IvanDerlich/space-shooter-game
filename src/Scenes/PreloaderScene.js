@@ -21,6 +21,8 @@ export default class PreloaderScene extends Phaser.Scene {
 
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
+
+    
     var loadingText = this.make.text({
       x: width / 2,
       y: height / 2 - 50,
