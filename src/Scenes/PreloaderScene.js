@@ -10,6 +10,7 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload () {
+    
     // add logo image
     this.add.image(400, 200, 'logo');
 
@@ -21,8 +22,6 @@ export default class PreloaderScene extends Phaser.Scene {
 
     var width = this.cameras.main.width;
     var height = this.cameras.main.height;
-
-    
     var loadingText = this.make.text({
       x: width / 2,
       y: height / 2 - 50,
@@ -84,18 +83,19 @@ export default class PreloaderScene extends Phaser.Scene {
     // load assets needed in our game
     this.load.image('blueButton1', 'assets/ui/blue_button02.png');
     this.load.image('blueButton2', 'assets/ui/blue_button03.png');
-    this.load.image('phaserLogo', 'assets/logo.png');
-    
+    this.load.image('phaserLogo', 'assets/logo.png');    
     this.load.image('box', 'assets/ui/grey_box.png');
     this.load.image('checkedBox', 'assets/ui/blue_boxCheckmark.png');
     this.load.audio('bgMusic', ['assets/TownTheme.mp3']);
   }
 
   ready () {
+    this.scene.start('Title');
+    //this.scene.start('Credits');
+    //this.scene.start('Options');
     this.readyCount++;
     if (this.readyCount === 2) {
       this.scene.start('Title');
     }
   }
 };
-
