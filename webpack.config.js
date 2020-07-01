@@ -1,65 +1,40 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
+module.exports = {
+  entry: {
+    app: './src/index.js'
+  },
 
-const config = {
-  entry: './src/scripts/main.js',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'app.bundle.js'
+  },
+
   module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        include: path.resolve(__dirname, 'src/'),
         use: {
-          loader: 'file-loader?name=/src/assets/[name].[ext]',
+          loader: 'babel-loader',
           options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'assets/',
-          },
-        },
-      },
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
-    ],
+            presets: ['env']
+          }
+        }
+      }
+    ]
   },
-  output: {
-    path: path.resolve(
-      __dirname,
-      'dist',
-    ),
+
+  devServer: {
+    contentBase: path.resolve(__dirname, 'build'),
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Output Management',
-      template: './src/index.html',
-    }),
-  ],
-};
 
-module.exports = (env, argv) => {
-  if (argv.mode === 'development') {
-    config.devtool = 'source-map';
-    config.output.filename = 'main.bundle.js';
-  }
-
-  if (argv.mode === 'production') {
-    config.plugins.push(new CleanWebpackPlugin());
-    config.output.filename = 'main.[hash].bundle.js';
-  }
-
-  return config;
+  plugins: [    
+    new webpack.DefinePlugin({
+      'typeof CANVAS_RENDERER': JSON.stringify(true),
+      'typeof WEBGL_RENDERER': JSON.stringify(true)
+    })
+  ]
+  
 };
