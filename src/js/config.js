@@ -1,4 +1,9 @@
-var config = {
+import 'phaser';
+import SceneGameOver from './SceneGameOver';
+import SceneMain from './SceneMain'
+import SceneMainMenu from './SceneMainMenu'
+
+export default {
   type: Phaser.WEBGL,
   width: 480,
   height: 640,
@@ -9,8 +14,10 @@ var config = {
       gravity: { x: 0, y: 0 }
     }
   },
-  scene: [],
+  scene: [
+    SceneMainMenu,
+    SceneMain,
+    SceneGameOver],
   pixelArt: true,
   roundPixels: true
 };
-
