@@ -2,7 +2,7 @@ import 'phaser';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor () {
-    super('GameOver');
+    super({ key: 'GameOver' });
   }
 
   preload () {
