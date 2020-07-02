@@ -1,2 +1,3 @@
-# space-shooter-game
-I'm bringing the classic space shooter back to life in this project. 
+# Shooter tutorial
+
+Following [this](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27) tutorial.
