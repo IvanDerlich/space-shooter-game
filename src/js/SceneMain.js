@@ -12,8 +12,7 @@ export default class SceneMain extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("sprBg0", "../../content/sprBg0.png");
-    this.load.image("sprBg1", "../../content/sprBg1.png");
+    
     this.load.spritesheet("sprExplosion", "../../content/sprExplosion.png", {
       frameWidth: 32,
       frameHeight: 32
@@ -155,16 +154,18 @@ export default class SceneMain extends Phaser.Scene {
     this.physics.add.overlap(this.player, this.enemies, function(player, enemy) {
       if (!player.getData("isDead") &&
           !enemy.getData("isDead")) {
-        player.explode(false);
+        player.explode(false);        
         enemy.explode(true);
+        player.onDestroy();
       }
     });
 
     this.physics.add.overlap(this.player, this.enemyLasers, function(player, laser) {
       if (!player.getData("isDead") &&
           !laser.getData("isDead")) {
-        player.explode(false);
+        player.explode(false);        
         laser.destroy();
+        player.onDestroy();
       }
     });
 
