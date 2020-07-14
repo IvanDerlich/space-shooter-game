@@ -6,15 +6,26 @@ export default class Entity extends Phaser.GameObjects.Sprite {
     this.scene = scene;
     this.scene.add.existing(this);
     this.scene.physics.world.enableBody(this, 0);
-    this.setData("type", type);
+    this.setData("type", type);    
     this.setData("isDead", false);
   }
 
   explode(canDestroy){
     if (!this.getData("isDead")) {
       // Set the texture to the explosion image, then play the animation
-      this.setTexture("sprExplosion");  // this refers to the same animation key we used when we added this.anims.create previously
       this.play("sprExplosion"); // play the animation
+      if (this.getData("isEnemy")) {
+        if(this.getData("ship") == "GunShip"){
+          this.scene.sys.game.globals.score += 3
+        }
+        if(this.getData("ship") == "ChaserShip"){
+          this.scene.sys.game.globals.score += 5
+        }
+        if(this.getData("ship") == "CarrierShip"){
+          this.scene.sys.game.globals.score += 1
+        }
+      }
+      this.setTexture("sprExplosion");  // this refers to the same animation key we used when we added this.anims.create previously
 
       // pick a random explosion sound within the array we defined in this.sfx in SceneMain
       this.scene.sfx.explosions[Phaser.Math.Between(0, this.scene.sfx.explosions.length - 1)].play();

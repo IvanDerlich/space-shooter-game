@@ -1,10 +1,11 @@
-import Entity from './Entity'
 import Enemy from './Enemy';
 import EnemyLaser from './EnemyLaser'
+
 
 export default class Gunship extends Enemy {
   constructor(scene, x, y) {
     super(scene, x, y, "sprEnemy0", "GunShip");
+    this.setData("ship","GunShip")
     this.play("sprEnemy0");
     this.shootTimer = this.scene.time.addEvent({
       delay: 1500,
@@ -30,4 +31,5 @@ export default class Gunship extends Enemy {
       }
     }
   }
+  
 }

@@ -1,26 +1,36 @@
-console.log("Helloworld!")
 import 'phaser';
-import config from './config';
 
-// import BootScene from './Scenes/BootScene';
-// import PreloaderScene from './Scenes/PreloaderScene';
-// import TitleScene from './Scenes/TitleScene';
-// import OptionsScene from './Scenes/OptionsScene';
-// import CreditsScene from './Scenes/CreditsScene';
-//import Model from './Model';
+import config from './Objects/config';
+import Model from './Objects/Model'
+
+import SceneBoot from './Scenes/Boot'
+import ScenePreloader from './Scenes/Preloader'
+import SceneMenu from './Scenes/Menu'
+import SceneGameOver from './Scenes/GameOver';
+import ScenePlay from './Scenes/Play'
+import SceneInstructions from './Scenes/Instructions'
+import SceneCredits from './Scenes/Credits'
+import SceneOptions from './Scenes/Options'
+import SceneScore from './Scenes/Score'
+
+
 
 class Game extends Phaser.Game {
   constructor () {
     super(config);
-    //const model = new Model();
-    //this.globals = { model, bgMusic: null };   
-    // this.scene.add('Preloader', PreloaderScene);
-    // this.scene.add('Title', TitleScene);
-    // this.scene.add('Options', OptionsScene);
-    // this.scene.add('Credits', CreditsScene);
-    // this.scene.add('Game', GameScene);    
+    const model = new Model();
+    this.globals = { model, bgMusic: null, score: 0 };   
+    this.scene.add('Instructions', SceneInstructions)
+    this.scene.add('Credits', SceneCredits);
+    this.scene.add('Boot',SceneBoot)
+    this.scene.add('Preloader',ScenePreloader)
+    this.scene.add('MainMenu', SceneMenu);
+    this.scene.add('Play', ScenePlay);
+    this.scene.add('GameOver', SceneGameOver);
+    this.scene.add('Options', SceneOptions);
+    this.scene.add('SceneScore',SceneScore)
 
-    this.scene.start('Main');
+    this.scene.start('Boot');
   }
 }
 
