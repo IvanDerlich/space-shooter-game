@@ -1,14 +1,14 @@
 import 'phaser';
 import MenuButton from '../Objects/MenuButton'
 import config from '../Objects/config'
-console.log("Main Menu Scene")
+//console.log("Main Menu Scene")
 
 import ScrollingBackground from '../Entities/ScrollingBackground'
 
 import soundBtnOver from '../../../content/sndBtnOver.wav'
 import sndBtnDown from '../../../content/sndBtnDown.wav'
 import menuMusic from '../../../content/Music/Menu.wav'
-
+import Text from '../Objects/Text'
 
 export default class SceneMainMenu extends Phaser.Scene {
 
@@ -31,20 +31,13 @@ export default class SceneMainMenu extends Phaser.Scene {
       btnDown: this.sound.add("sndBtnDown")
     };
 
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2 - 100, 'Play', 'Play');
-    this.optionsButton = new MenuButton(this, config.width/2, config.height/2, 'Options', 'Options');
-    this.creditsButton = new MenuButton(this, config.width/2, config.height/2 + 100, 'Credits', 'Credits');
-    this.instructionsButton = new MenuButton(this, config.width/2, config.height/2 + 200, 'How to ...', 'Instructions');
+    new MenuButton(this, config.width/2, config.height/2 - 100, 'Play', 'Play');
+    new MenuButton(this, config.width/2, config.height/2, 'Options', 'Options');
+    new MenuButton(this, config.width/2, config.height/2 + 100, 'Credits', 'Credits');
+    new MenuButton(this, config.width/2, config.height/2 + 200, 'How to ...', 'Instructions');
   
-    this.title = this.add.text(this.game.config.width * 0.5, 128, "SPACE SHOOTER", {
-      fontFamily: 'monospace',
-      fontSize: 48,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });
-
-    this.title.setOrigin(0.5);
+    this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);
+    new Text(this, "SPACE SHOOTER", 48, config.width/2 - 150)
 
     this.backgrounds = [];
     for (var i = 0; i < 5; i++) {
@@ -60,6 +53,7 @@ export default class SceneMainMenu extends Phaser.Scene {
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
+    this.scene.start('Score');
   }
   update(){
     for (var i = 0; i < this.backgrounds.length; i++) {

@@ -1,5 +1,5 @@
 import 'phaser';
-console.log("Preloader Scene")
+//console.log("Preloader Scene")
 
 //<comment1> I need to import files using 'import ... from ...' because this way file loader can apply a unique hash them. If you know a better way please let me know.
 import sprBtnPlay from '../../../content/sprBtnPlay.png';

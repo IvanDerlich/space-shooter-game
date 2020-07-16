@@ -1,7 +1,7 @@
 import 'phaser';
 
 import config from './Objects/config';
-import Model from './Objects/Model'
+
 
 import SceneBoot from './Scenes/Boot'
 import ScenePreloader from './Scenes/Preloader'
@@ -12,14 +12,14 @@ import SceneInstructions from './Scenes/Instructions'
 import SceneCredits from './Scenes/Credits'
 import SceneOptions from './Scenes/Options'
 import SceneScore from './Scenes/Score'
+import globals from './Objects/globals'
 
 
 
 class Game extends Phaser.Game {
   constructor () {
     super(config);
-    const model = new Model();
-    this.globals = { model, bgMusic: null, score: 0 };   
+    this.globals = globals;   
     this.scene.add('Instructions', SceneInstructions)
     this.scene.add('Credits', SceneCredits);
     this.scene.add('Boot',SceneBoot)

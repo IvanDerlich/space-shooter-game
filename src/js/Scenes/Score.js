@@ -3,74 +3,48 @@ import config from '../Objects/config';
 import ScrollingBackground from '../Entities/ScrollingBackground'
 import MenuButton from '../Objects/MenuButton'
 import menuMusic from '../../../content/Music/Menu.wav'
+import getScores from '../GoogleCloud/getScores'
+import Text from '../Objects/Text'
 
+export default class InstructionsScene extends Phaser.Scene {  
 
-export default class InstructionsScene extends Phaser.Scene {
   constructor () {
-    super('Score');
+    super('Score');    
   }
 
   preload(){
     this.load.audio('menuMusic', menuMusic);
   }
 
-  create () {
+  updateScores(scores){
+        
+    this.fetching.destroy()
+    
+    scores = scores.sort((a, b) => b.score - a.score)
+    for ( var i = 0 ; i < 10 ; i++ )
+      new Text(this, "" + (i + 1) + " - " + scores[i].user + ": " + scores[i].score ,20,config.height/2 - 200 + 40 * i )    
+    
+    this.update();    
+  }
 
-   
+  displayError(message){
+    console.log(message)
+  }
+
+  create () {
+    //this.globals = this.sys.game.globals
+    this.scores = getScores(this, this.updateScores );    //if no error
+    //console.log(this.sys.game.globals)    
     this.sfx = {
       btnOver: this.sound.add("sndBtnOver"),
       btnDown: this.sound.add("sndBtnDown")
     };    
     this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);
-
-    this.title = this.add.text(
-      this.game.config.width * 0.5,
-      128, 
-       "Score", {
-        fontFamily: 'monospace',
-        fontSize: 48,
-        fontStyle: 'bold',
-        color: '#ffffff',
-        align: 'center'
-    });    
-
-    Phaser.Display.Align.In.Center(
-      this.title,
-      this.zone
-    );
-    this.title.y = config.height/2 - 200
-
-    this.moves = this.add.text(this.game.config.width * 0.5, 128, "w,a,s,d to move", {
-      fontFamily: 'monospace',
-      fontSize: 24,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });    
-
-    Phaser.Display.Align.In.Center(
-      this.moves,
-      this.zone
-    );
-
-    this.moves.y = config.height/2 -100
-
-    this.shoot = this.add.text(this.game.config.width * 0.5, 128, "space to shoot", {
-      fontFamily: 'monospace',
-      fontSize: 24,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });    
-
-    Phaser.Display.Align.In.Center(
-      this.shoot,
-      this.zone
-    );
-    this.shoot.y = config.height/2
-
-
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
+    new Text(this, "Score" , 48 , config.height/2 - 300)
+    this.fetching = new Text(this,'Fetching data...',20,config.height/2 - 200)
+    //console.log(this.fetching)
+    
+    new MenuButton(this, config.width/2, config.height/2 + 250, 'Menu', 'Menu');
 
 
     this.backgrounds = [];
@@ -82,12 +56,16 @@ export default class InstructionsScene extends Phaser.Scene {
     }
     
     this.model = this.sys.game.globals.model;
+
+    
     if (this.model.musicOn === true && this.model.bgMusicPlaying === false) {
       this.bgMusic = this.sound.add('menuMusic', { volume: 0.5, loop: true });
       this.bgMusic.play();
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
+    
+    
   }
 
   update(){

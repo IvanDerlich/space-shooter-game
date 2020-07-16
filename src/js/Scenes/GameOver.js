@@ -3,47 +3,38 @@ const path = require('path');
 import ScrollingBackground from '../Entities/ScrollingBackground'
 import MenuButton from '../Objects/MenuButton'
 import config from '../Objects/config'
+import Text from '../Objects/Text'
+import setScore from '../GoogleCloud/setScore'
 
 export default class SceneGameOver extends Phaser.Scene {
 
   constructor() {
-    super({ key: "SceneGameOver" });
+    super({ key: "GameOver" });
   }
 
   preload() {
 
   }
 
+  scoreUploaded(){  
+    this.update()
+  }
+
   create() {
+    setScore(this,"terere",-9990)
     this.sfx = {
       btnOver: this.sound.add("sndBtnOver"),
       btnDown: this.sound.add("sndBtnDown")
     };
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2, 'Restart', 'Play');
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2 + 200, '+Score', 'Score');
    
-    this.title = this.add.text(this.game.config.width * 0.5, 128, "GAME OVER", {
-      fontFamily: 'monospace',
-      fontSize: 48,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });
+    new MenuButton(this, config.width/2, config.height/2, 'Restart', 'Play');
+    new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
+    new MenuButton(this, config.width/2, config.height/2 + 200, '+Score', 'Score');
+    
 
-    this.title.setOrigin(0.5);
-    this.title.y = config.height/2 - 200
-
-    this.score = this.add.text(this.game.config.width * 0.5, 128, "SCORE: " + this.sys.game.globals.score, {
-      fontFamily: 'monospace',
-      fontSize: 48,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });
-
-    this.score.setOrigin(0.5);
-    this.score.y = config.height/2 - 100
+    this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);
+    new Text(this,"GAME OVER",48,config.height/2 - 200)
+    new Text(this,"SCORE: " + this.sys.game.globals.score,48,config.height/2 - 100)
 
     this.backgrounds = [];
     for (var i = 0; i < 5; i++) {

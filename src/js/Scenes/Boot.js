@@ -1,5 +1,5 @@
 import 'phaser';
-console.log("Boot Scene")
+//console.log("Boot Scene")
  
 //</comment1>
 

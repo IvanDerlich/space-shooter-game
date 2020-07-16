@@ -46,10 +46,9 @@ export default class OptionsScene extends Phaser.Scene {
 
     this.soundText = this.add.text(180, 290, 'Sound Enabled', { fontSize: 24 });
     
-    this.updateAudio();	
- 
+    this.updateAudio();	 
 
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
+    new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
 
     this.updateAudio();
 

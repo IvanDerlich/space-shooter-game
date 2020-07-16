@@ -47,7 +47,9 @@ export default class CreditsScene extends Phaser.Scene {
         this.madeByTween.destroy;
         this.scene.start('Menu');
       }.bind(this)
-    });    
+    });  
+    
+    
     this.backgrounds = [];
     for (var i = 0; i < 5; i++) {
       var keys = ["sprBg0", "sprBg1"];

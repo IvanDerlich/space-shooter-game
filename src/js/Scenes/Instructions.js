@@ -3,7 +3,7 @@ import config from '../Objects/config';
 import ScrollingBackground from '../Entities/ScrollingBackground'
 import MenuButton from '../Objects/MenuButton'
 import menuMusic from '../../../content/Music/Menu.wav'
-
+import Text from '../Objects/Text'
 
 export default class InstructionsScene extends Phaser.Scene {
   constructor () {
@@ -20,55 +20,11 @@ export default class InstructionsScene extends Phaser.Scene {
       btnDown: this.sound.add("sndBtnDown")
     };    
     this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);
+    new Text(this,"INSTRUCTIONS",48,config.height/2 - 200)
+    new Text(this,"w,a,s,d to move", 24 , config.height/2 -100 ) 
+    new Text(this,"space to shoot", 24 , config.height/2 )
 
-    this.title = this.add.text(
-      this.game.config.width * 0.5,
-      128, 
-       "INSTRUCTIONS", {
-        fontFamily: 'monospace',
-        fontSize: 48,
-        fontStyle: 'bold',
-        color: '#ffffff',
-        align: 'center'
-    });    
-
-    Phaser.Display.Align.In.Center(
-      this.title,
-      this.zone
-    );
-    this.title.y = config.height/2 - 200
-
-    this.moves = this.add.text(this.game.config.width * 0.5, 128, "w,a,s,d to move", {
-      fontFamily: 'monospace',
-      fontSize: 24,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });    
-
-    Phaser.Display.Align.In.Center(
-      this.moves,
-      this.zone
-    );
-
-    this.moves.y = config.height/2 -100
-
-    this.shoot = this.add.text(this.game.config.width * 0.5, 128, "space to shoot", {
-      fontFamily: 'monospace',
-      fontSize: 24,
-      fontStyle: 'bold',
-      color: '#ffffff',
-      align: 'center'
-    });    
-
-    Phaser.Display.Align.In.Center(
-      this.shoot,
-      this.zone
-    );
-    this.shoot.y = config.height/2
-
-
-    this.gameButton = new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
+    new MenuButton(this, config.width/2, config.height/2 + 100, 'Menu', 'Menu');
 
 
     this.backgrounds = [];
