@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/IvanDerlich/space-shooter-game#readme",
   "devDependencies": {
+    "@azerion/phaser-input": "^2.0.5",
     "@babel/core": "^7.10.4",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",

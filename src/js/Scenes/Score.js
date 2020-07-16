@@ -2,46 +2,44 @@ import 'phaser';
 import config from '../Objects/config';
 import ScrollingBackground from '../Entities/ScrollingBackground'
 import MenuButton from '../Objects/MenuButton'
-import menuMusic from '../../../content/Music/Menu.wav'
-import getScores from '../GoogleCloud/getScores'
 import Text from '../Objects/Text'
+import menuMusic from '../../../content/Music/Menu.wav'
+
+import userNameInput from '../ExternalCommunication/usernameInput'
+import setScore from '../ExternalCommunication/setScore'
+
 
 export default class InstructionsScene extends Phaser.Scene {  
 
   constructor () {
-    super('Score');    
+    super('Score');  
+    this.userName = null
   }
 
   preload(){
     this.load.audio('menuMusic', menuMusic);
-  }
-
-  updateScores(scores){
-        
-    this.fetching.destroy()
-    
-    scores = scores.sort((a, b) => b.score - a.score)
-    for ( var i = 0 ; i < 10 ; i++ )
-      new Text(this, "" + (i + 1) + " - " + scores[i].user + ": " + scores[i].score ,20,config.height/2 - 200 + 40 * i )    
-    
-    this.update();    
-  }
-
-  displayError(message){
-    console.log(message)
-  }
-
+  }  
+ 
   create () {
+    
+    this.score = this.sys.game.globals.score
+
+    this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);
+
+    this.fetching = new Text(this,'Insert Username...',20,config.height/2 - 200)
+    userNameInput(this)       
+    setScore(this)
+    
+
     //this.globals = this.sys.game.globals
-    this.scores = getScores(this, this.updateScores );    //if no error
+    //this.scores = getScores(this);    //if no error
     //console.log(this.sys.game.globals)    
     this.sfx = {
       btnOver: this.sound.add("sndBtnOver"),
       btnDown: this.sound.add("sndBtnDown")
     };    
-    this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);
     new Text(this, "Score" , 48 , config.height/2 - 300)
-    this.fetching = new Text(this,'Fetching data...',20,config.height/2 - 200)
+    
     //console.log(this.fetching)
     
     new MenuButton(this, config.width/2, config.height/2 + 250, 'Menu', 'Menu');

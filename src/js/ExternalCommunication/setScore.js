@@ -1,7 +1,12 @@
-export default (scene, user,score) => {  
+import getScores from '../ExternalCommunication/getScores'
+
+
+export default (scene) => {   
+  
+  scene.fetching.setText("Posting Score...")
   var data = {
-    user : user,
-    score : score
+    user : scene.userName,
+    score : scene.score
   }
   console.log(JSON.stringify(data))
   
@@ -16,10 +21,10 @@ export default (scene, user,score) => {
     body: JSON.stringify(data)
   })
     .then((response) => response.json())
-    .then((response) => {  
-      console.log(response)
-      //scene.updateScores(response.result) 
-      scene.scoreUploaded()
-      //new MenuButton(scene, config.width/2, config.height/2 + 200, '+Score', 'Score');           
+    .then((response) => {       
+      getScores(scene)
+      console.log(response)       
+      scene.update()
+      getScores(scene)
     })    
 }

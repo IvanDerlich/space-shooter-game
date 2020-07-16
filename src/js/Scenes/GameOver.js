@@ -4,7 +4,7 @@ import ScrollingBackground from '../Entities/ScrollingBackground'
 import MenuButton from '../Objects/MenuButton'
 import config from '../Objects/config'
 import Text from '../Objects/Text'
-import setScore from '../GoogleCloud/setScore'
+
 
 export default class SceneGameOver extends Phaser.Scene {
 
@@ -16,12 +16,12 @@ export default class SceneGameOver extends Phaser.Scene {
 
   }
 
-  scoreUploaded(){  
-    this.update()
-  }
+  
 
   create() {
-    setScore(this,"terere",-9990)
+    //var input = game.add.inputField(10, 90);
+
+    
     this.sfx = {
       btnOver: this.sound.add("sndBtnOver"),
       btnDown: this.sound.add("sndBtnDown")

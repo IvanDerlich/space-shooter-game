@@ -1,3 +1,5 @@
+import 'phaser';  
+
 export default class Text extends Phaser.GameObjects.Container{
   constructor(scene,content,fontSize,y) {
     super(scene)
