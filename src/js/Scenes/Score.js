@@ -30,18 +30,13 @@ export default class InstructionsScene extends Phaser.Scene {
     userNameInput(this)       
     setScore(this)
     
-
-    //this.globals = this.sys.game.globals
-    //this.scores = getScores(this);    //if no error
-    //console.log(this.sys.game.globals)    
+      
     this.sfx = {
       btnOver: this.sound.add("sndBtnOver"),
       btnDown: this.sound.add("sndBtnDown")
     };    
-    new Text(this, "Score" , 48 , config.height/2 - 300)
-    
-    //console.log(this.fetching)
-    
+    new Text(this, "Score" , 48 , config.height/2 - 300)    
+   
     new MenuButton(this, config.width/2, config.height/2 + 250, 'Menu', 'Menu');
 
 

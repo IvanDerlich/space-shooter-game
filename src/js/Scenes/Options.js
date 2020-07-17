@@ -35,16 +35,17 @@ export default class OptionsScene extends Phaser.Scene {
       this.updateAudio();
     }.bind(this));    
 
-    this.musicText = this.add.text(180, 190, 'Music Enabled', { fontSize: 24 });     
+    this.add.text(180, 190, 'Music Enabled', { fontSize: 24 });     
 
     this.soundButton = this.add.image(130, 300, 'checkBoxUnchecked');  
     this.soundButton.setInteractive();        
     this.soundButton.on('pointerdown', function () {
       this.model.soundOn = !this.model.soundOn;
       this.updateAudio();
+      this.scene.start("Options")
     }.bind(this));  
 
-    this.soundText = this.add.text(180, 290, 'Sound Enabled', { fontSize: 24 });
+    this.add.text(180, 290, 'Sound Enabled', { fontSize: 24 });
     
     this.updateAudio();	 
 

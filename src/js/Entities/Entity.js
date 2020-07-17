@@ -28,7 +28,8 @@ export default class Entity extends Phaser.GameObjects.Sprite {
       this.setTexture("sprExplosion");  // this refers to the same animation key we used when we added this.anims.create previously
 
       // pick a random explosion sound within the array we defined in this.sfx in SceneMain
-      this.scene.sfx.explosions[Phaser.Math.Between(0, this.scene.sfx.explosions.length - 1)].play();
+      if(this.scene.sys.game.globals.model.soundOn)
+        this.scene.sfx.explosions[Phaser.Math.Between(0, this.scene.sfx.explosions.length - 1)].play();
 
       if (this.shootTimer !== undefined) {
         if (this.shootTimer) {

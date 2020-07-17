@@ -30,8 +30,7 @@ export default class Player extends Entity {
 
   update() {
     //see if you can place some inertia here
-    this.body.setVelocity(0, 0);
-
+    this.body.setVelocity(0, 0);    
     this.x = Phaser.Math.Clamp(this.x, 0, this.scene.game.config.width);
     this.y = Phaser.Math.Clamp(this.y, 0, this.scene.game.config.height);
 
@@ -42,18 +41,17 @@ export default class Player extends Entity {
       }
       else { // when the "manual timer" is triggered:
         var laser = new PlayerLaser(this.scene, this.x, this.y);
-        this.scene.playerLasers.add(laser);
-      
-        this.scene.sfx.laser.play(); // play the laser sound effect
+        this.scene.playerLasers.add(laser);        
+        if(this.scene.sys.game.globals.model.soundOn)
+          this.scene.sfx.laser.play(); // play the laser sound effect
         this.setData("timerShootTick", 0);
       }
     }
-    //Reason
 
   }
 
   onDestroy(){
-    this.scene.time.addEvent({ // go to game over scene
+    this.scene.time.addEvent({ 
       delay: 1000,
       callback: function() {
         this.scene.scene.start("GameOver");
