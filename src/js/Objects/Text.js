@@ -1,25 +1,26 @@
-import 'phaser';  
+import Phaser from 'phaser';
 
-export default class Text extends Phaser.GameObjects.Container{
-  constructor(scene,content,fontSize,y) {
-    super(scene)
+export default class Text extends Phaser.GameObjects.Container {
+  constructor(scene, content, fontSize, y) {
+    super(scene);
 
-    var text = scene.add.text(
+    const text = scene.add.text(
       scene.game.config.width * 0.5,
-      128, 
+      128,
       content, {
         fontFamily: 'monospace',
-        fontSize: fontSize,
+        fontSize,
         fontStyle: 'bold',
         color: '#ffffff',
-        align: 'center'
-    });    
+        align: 'center',
+      },
+    );
 
     Phaser.Display.Align.In.Center(
       text,
-      scene.zone //we need to define a zone in the scene or will throw error
+      scene.zone, // we need to define a zone in the scene or will throw error
     );
-    text.y = y
-    return text
+    text.y = y;
+    return text;
   }
 }

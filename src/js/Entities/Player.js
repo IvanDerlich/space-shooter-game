@@ -1,64 +1,62 @@
-import Entity from './Entity'
-import PlayerLaser from './PlayerLaser'     
+import Phaser from 'phaser';
+import Entity from './Entity';
+import PlayerLaser from './PlayerLaser';
 
 export default class Player extends Entity {
-
-  constructor(scene, x, y, key){
-    super(scene, x, y, key, "Player");
-    this.setData("speed", 200);
-    this.play("sprPlayer");
-    this.setData("isShooting", false);
-    this.setData("timerShootDelay", 10);
-    this.setData("timerShootTick", this.getData("timerShootDelay") - 1);
+  constructor(scene, x, y, key) {
+    super(scene, x, y, key, 'Player');
+    this.setData('speed', 200);
+    this.play('sprPlayer');
+    this.setData('isShooting', false);
+    this.setData('timerShootDelay', 10);
+    this.setData('timerShootTick', this.getData('timerShootDelay') - 1);
   }
 
   moveUp() {
-    this.body.velocity.y = -this.getData("speed");
+    this.body.velocity.y = -this.getData('speed');
   }
-  
+
   moveDown() {
-    this.body.velocity.y = this.getData("speed");
+    this.body.velocity.y = this.getData('speed');
   }
-  
+
   moveLeft() {
-    this.body.velocity.x = -this.getData("speed");
+    this.body.velocity.x = -this.getData('speed');
   }
-  
+
   moveRight() {
-    this.body.velocity.x = this.getData("speed");
+    this.body.velocity.x = this.getData('speed');
   }
 
   update() {
-    //see if you can place some inertia here
-    this.body.setVelocity(0, 0);    
+    // see if you can place some inertia here
+    this.body.setVelocity(0, 0);
     this.x = Phaser.Math.Clamp(this.x, 0, this.scene.game.config.width);
     this.y = Phaser.Math.Clamp(this.y, 0, this.scene.game.config.height);
 
-    //</comment>  https://imgur.com/sb1DFuK
-    if (this.getData("isShooting")) {
-      if (this.getData("timerShootTick") < this.getData("timerShootDelay")) {
-        this.setData("timerShootTick", this.getData("timerShootTick") + 1); // every game update, increase timerShootTick by one until we reach the value of timerShootDelay
-      }
-      else { // when the "manual timer" is triggered:
-        var laser = new PlayerLaser(this.scene, this.x, this.y);
-        this.scene.playerLasers.add(laser);        
-        if(this.scene.sys.game.globals.model.soundOn)
-          this.scene.sfx.laser.play(); // play the laser sound effect
-        this.setData("timerShootTick", 0);
+    // </comment>  https://imgur.com/sb1DFuK
+    if (this.getData('isShooting')) {
+      if (this.getData('timerShootTick') < this.getData('timerShootDelay')) {
+        this.setData('timerShootTick', this.getData('timerShootTick') + 1); // every game update, increase timerShootTick by one until we reach the value of timerShootDelay
+      } else { // when the "manual timer" is triggered:
+        const laser = new PlayerLaser(this.scene, this.x, this.y);
+        this.scene.playerLasers.add(laser);
+        const { soundOn } = this.scene.sys.game.globals.model.soundOn;
+        const laserSound = this.scene.sfx.laser;
+        if (soundOn) laserSound.play(); // play the laser sound effect
+        this.setData('timerShootTick', 0);
       }
     }
-
   }
 
-  onDestroy(){
-    this.scene.time.addEvent({ 
+  onDestroy() {
+    this.scene.time.addEvent({
       delay: 1000,
-      callback: function() {
-        this.scene.scene.start("GameOver");
+      callback() {
+        this.scene.scene.start('GameOver');
       },
       callbackScope: this,
-      loop: false
+      loop: false,
     });
   }
-
 }

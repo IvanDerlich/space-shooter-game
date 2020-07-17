@@ -1,9 +1,9 @@
-import Model from './Model'
+import Model from './Model';
 
-export default {  
+export default {
   model: new Model(),
   bgMusic: null,
-  scores: [], 
-  score: 0, 
-  message: ""
-}
+  scores: [],
+  score: 0,
+  message: '',
+};
