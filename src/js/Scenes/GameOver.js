@@ -1,6 +1,6 @@
 /* eslint-disable no-new */
 
-import Phaser from 'phaser';
+import('phaser')
 import ScrollingBackground from '../Entities/ScrollingBackground';
 import MenuButton from '../Objects/MenuButton';
 import config from '../Objects/config';
@@ -12,8 +12,6 @@ export default class SceneGameOver extends Phaser.Scene {
   }
 
   create() {
-    // var input = game.add.inputField(10, 90);
-
     this.sfx = {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),

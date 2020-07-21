@@ -1,11 +1,9 @@
-import Phaser from 'phaser';
-// <comment>Find a way to DRY '../Entities/'
+import('phaser')
 import ScrollingBackground from '../Entities/ScrollingBackground';
 import Player from '../Entities/Player';
 import CarrierShip from '../Entities/Carriership';
 import ChaserShip from '../Entities/Chasership';
 import GunShip from '../Entities/Gunship';
-// </comment>s
 
 export default class SceneMain extends Phaser.Scene {
   constructor() {

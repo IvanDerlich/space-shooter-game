@@ -1,7 +1,6 @@
 /* eslint-disable no-new */
-import Phaser from 'phaser';
+import('phaser')
 import Text from '../Objects/Text';
-// </comment1>
 
 import logo from '../../../content/logo.png';
 import config from '../Objects/config';

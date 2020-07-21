@@ -1,8 +1,7 @@
 /* eslint-disable no-new */
-import Phaser from 'phaser';
+import('phaser')
 import MenuButton from '../Objects/MenuButton';
 import config from '../Objects/config';
-// console.log("Main Menu Scene")
 
 import ScrollingBackground from '../Entities/ScrollingBackground';
 
@@ -50,7 +49,6 @@ export default class SceneMainMenu extends Phaser.Scene {
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
-    // this.scene.start('Score');
   }
 
   update() {

@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-import Phaser from 'phaser';
+import('phaser')
 import config from '../Objects/config';
 import ScrollingBackground from '../Entities/ScrollingBackground';
 import MenuButton from '../Objects/MenuButton';

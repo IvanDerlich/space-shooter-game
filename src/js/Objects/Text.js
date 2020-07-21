@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import('phaser')
 
 export default class Text extends Phaser.GameObjects.Container {
   constructor(scene, content, fontSize, y) {

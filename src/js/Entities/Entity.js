@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import('phaser')
 
 export default class Entity extends Phaser.GameObjects.Sprite {
   constructor(scene, x, y, key, type) {
@@ -28,7 +28,7 @@ export default class Entity extends Phaser.GameObjects.Sprite {
       this.setTexture('sprExplosion'); // this refers to the same animation key we used when we added this.anims.create previously
 
       // pick a random explosion sound within the array we defined in this.sfx in SceneMain
-      const { soundOn } = this.scene.sys.game.globals.model.soundOn;
+      const { soundOn } = this.scene.sys.game.globals.model;
       const { explosions } = this.scene.sfx;
       if (soundOn) explosions[Phaser.Math.Between(0, this.scene.sfx.explosions.length - 1)].play();
 

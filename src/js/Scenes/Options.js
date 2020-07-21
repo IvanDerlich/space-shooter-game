@@ -1,6 +1,6 @@
 /* eslint-disable no-new */
 
-import Phaser from 'phaser';
+import('phaser')
 import MenuButton from '../Objects/MenuButton';
 import config from '../Objects/config';
 

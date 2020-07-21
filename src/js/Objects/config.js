@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import('phaser')
 
 export default {
   type: Phaser.WEBGL,
@@ -11,10 +11,6 @@ export default {
       gravity: { x: 0, y: 0 },
     },
   },
-  // scene: [
-  //   SceneMainMenu,
-  //   SceneMain,
-  //   SceneGameOver],
   pixelArt: true,
   roundPixels: true,
 };

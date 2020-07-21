@@ -28,7 +28,7 @@ Build the project using a node script:
 
 ## Development Process
 
-This game was made following [This](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba2) guide.
+This game was made following [This](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27) guide.
 
 ## Ackowledgments
 
