@@ -1,5 +1,5 @@
 /*eslint no-undef: "Phaser*/
-import('phaser')
+import('phaser');
 import ScrollingBackground from '../Entities/ScrollingBackground';
 import Player from '../Entities/Player';
 import CarrierShip from '../Entities/Carriership';

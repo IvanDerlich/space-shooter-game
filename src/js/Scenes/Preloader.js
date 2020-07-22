@@ -1,6 +1,6 @@
 /* eslint-disable no-new */
 /*eslint no-undef: "Phaser*/
-import('phaser')
+import('phaser');
 import config from '../Objects/config';
 
 import sprBtnPlay from '../../../content/sprBtnPlay.png';

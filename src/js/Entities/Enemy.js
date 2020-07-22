@@ -1,5 +1,5 @@
 /*eslint no-undef: "Phaser*/
-import('phaser')
+import('phaser');
 import Entity from './Entity';
 
 export default class Enemy extends Entity {
