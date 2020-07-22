@@ -1,3 +1,4 @@
+/*eslint no-undef: "Phaser*/
 import('phaser')
 import ScrollingBackground from '../Entities/ScrollingBackground';
 import Player from '../Entities/Player';

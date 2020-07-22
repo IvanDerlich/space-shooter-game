@@ -1,3 +1,4 @@
+/*eslint no-undef: "Phaser*/
 import('phaser')
 import Entity from './Entity';
 

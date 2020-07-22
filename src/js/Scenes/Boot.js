@@ -1,4 +1,5 @@
 /* eslint-disable no-new */
+/*eslint no-undef: "Phaser*/
 import('phaser')
 import Text from '../Objects/Text';
 

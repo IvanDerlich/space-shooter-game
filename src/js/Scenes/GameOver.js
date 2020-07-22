@@ -1,5 +1,6 @@
 /* eslint-disable no-new */
 
+/*eslint no-undef: "Phaser*/
 import('phaser')
 import ScrollingBackground from '../Entities/ScrollingBackground';
 import MenuButton from '../Objects/MenuButton';

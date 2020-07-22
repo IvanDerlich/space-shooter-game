@@ -1,3 +1,4 @@
+/*eslint no-undef: "Phaser*/
 import('phaser')
 
 export default class ScrollingBackground {

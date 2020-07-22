@@ -1,3 +1,5 @@
+/*eslint no-undef: "Phaser*/
+/*eslint no-undef: "Phaser*/
 import('phaser')
 
 import config from './Objects/config';
