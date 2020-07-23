@@ -1,5 +1,6 @@
-/*eslint no-undef: "Phaser*/
-import('phaser');
+/* eslint-disable no-undef */
+
+import 'phaser';
 
 export default class Text extends Phaser.GameObjects.Container {
   constructor(scene, content, fontSize, y) {

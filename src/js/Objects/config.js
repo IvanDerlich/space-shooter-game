@@ -1,5 +1,6 @@
-/*eslint no-undef: "Phaser*/
-import('phaser');
+/* eslint-disable no-undef */
+
+import 'phaser';
 
 export default {
   type: Phaser.WEBGL,

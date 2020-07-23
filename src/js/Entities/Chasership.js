@@ -1,5 +1,8 @@
-require('phaser')
+/* eslint-disable no-undef */
+
 import Enemy from './Enemy';
+
+require('phaser');
 
 export default class ChaserShip extends Enemy {
   constructor(scene, x, y) {

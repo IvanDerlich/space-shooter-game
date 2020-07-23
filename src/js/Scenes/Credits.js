@@ -1,5 +1,6 @@
-/*eslint no-undef: "Phaser*/
-import('phaser');
+/* eslint-disable no-undef */
+
+import 'phaser';
 import config from '../Objects/config';
 import ScrollingBackground from '../Entities/ScrollingBackground';
 

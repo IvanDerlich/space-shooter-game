@@ -1,6 +1,7 @@
 /* eslint-disable no-new */
-/*eslint no-undef: "Phaser*/
-import('phaser');
+/* eslint-disable no-undef */
+
+import 'phaser';
 import Text from '../Objects/Text';
 
 import logo from '../../../content/logo.png';
