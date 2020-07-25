@@ -7,7 +7,7 @@
     "deploy": "webpack --mode production && surge /home/niro/Documents/Microverse/Main-Curriculm/011-Capstone-Shooter-Game/dist space-shooter-ivanderlich.surge.sh && xdg-open https://space-shooter-ivanderlich.surge.sh",
     "d": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
     "dn": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh",
-    "build": "webpack --mode production && xdg-open ./dist/index.html",
+    "build2": "webpack --mode production && xdg-open ./dist/index.html",
     "b": "webpack --mode production && xdg-open ./dist/index.html",
     "bn": "webpack --mode production",
     "dev": "webpack --mode development && xdg-open ./dist/index.html",
@@ -15,10 +15,16 @@
     "qn": "webpack --mode development",
     "test": "jest  --detectOpenHandles",
     "t": "jest",
-    "start": "webpack-dev-server --mode development --open",
+    "start2": "webpack-dev-server --mode development --open",
     "s": "webpack-dev-server --mode development --open",
     "watch": "webpack --mode production --watch",
-    "w": "webpack --mode production --watch"
+    "w": "webpack --mode production --watch",
+    "start": "node index.js",
+    "build": "webpack"
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
   },
   "repository": {
     "type": "git",
@@ -58,6 +64,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.5",
+    "heroku": "^7.42.5",
     "i": "^0.3.6",
     "npm": "^6.14.6",
     "phaser": "^3.23.0"
