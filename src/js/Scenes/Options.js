@@ -1,5 +1,5 @@
 /* eslint-disable no-new */
-
+/* eslint-disable  import/no-unresolved */
 /* eslint-disable no-undef */
 
 import 'phaser';

@@ -1,5 +1,6 @@
 /* eslint-disable no-new */
 /* eslint-disable no-undef */
+/* eslint-disable  import/no-unresolved */
 
 import 'phaser';
 import MenuButton from '../Objects/MenuButton';
