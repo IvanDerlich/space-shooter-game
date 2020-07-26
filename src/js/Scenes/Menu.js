@@ -30,12 +30,13 @@ export default class SceneMainMenu extends Phaser.Scene {
       btnDown: this.sound.add('sndBtnDown'),
     };
 
-    new MenuButton(this, config.width / 2, config.height / 2 - 100, 'Play', 'Play');
-    new MenuButton(this, config.width / 2, config.height / 2, 'Options', 'Options');
-    new MenuButton(this, config.width / 2, config.height / 2 + 100, 'Credits', 'Credits');
-    new MenuButton(this, config.width / 2, config.height / 2 + 200, 'How to ...', 'Instructions');
+    const height = config.height / 2;
+    new MenuButton(this, config.width / 2, height - 100, 'Play', 'Play');
+    new MenuButton(this, config.width / 2, height, 'Options', 'Options');
+    new MenuButton(this, config.width / 2, height + 100, 'Credits', 'Credits');
+    new MenuButton(this, config.width / 2, height + 200, 'How to ...', 'Instructions');
 
-    this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
+    this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
     new Text(this, 'SPACE SHOOTER', 48, config.width / 2 - 150);
 
     this.backgrounds = [];

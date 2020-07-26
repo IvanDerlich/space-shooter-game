@@ -23,12 +23,14 @@ export default class InstructionsScene extends Phaser.Scene {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
     };
-    this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
-    new Text(this, 'INSTRUCTIONS', 48, config.height / 2 - 200);
-    new Text(this, 'w,a,s,d to move', 24, config.height / 2 - 100);
-    new Text(this, 'space to shoot', 24, config.height / 2);
 
-    new MenuButton(this, config.width / 2, config.height / 2 + 100, 'Menu', 'Menu');
+    const height = config.height / 2,
+    this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
+    new Text(this, 'INSTRUCTIONS', 48, height - 200);
+    new Text(this, 'w,a,s,d to move', 24, height - 100);
+    new Text(this, 'space to shoot', 24, height);
+
+    new MenuButton(this, config.width / 2, height + 100, 'Menu', 'Menu');
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {

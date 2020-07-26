@@ -24,11 +24,13 @@ export default class InstructionsScene extends Phaser.Scene {
   }
 
   create() {
+    const height = config.height / 2;
+
     this.score = this.sys.game.globals.score;
 
-    this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
+    this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
 
-    this.fetching = new Text(this, 'Insert Username...', 20, config.height / 2 - 200);
+    this.fetching = new Text(this, 'Insert Username...', 20, height - 200);
     userNameInput(this);
     this.fetching.setText('Posting Score...');
     const gameId = 'WQw8aJXQ7oC0nuqYBROD';
@@ -41,7 +43,7 @@ export default class InstructionsScene extends Phaser.Scene {
         this.update();
         this.fetching.destroy();
         for (let i = 0; i < 10; i += 1) {
-          new Text(this, `${i + 1} - ${scores[i].user}: ${scores[i].score}`, 20, config.height / 2 - 200 + 40 * i);
+          new Text(this, `${i + 1} - ${scores[i].user}: ${scores[i].score}`, 20, height - 200 + 40 * i);
         }
         this.update();
       });
@@ -49,9 +51,9 @@ export default class InstructionsScene extends Phaser.Scene {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
     };
-    new Text(this, 'Score', 48, config.height / 2 - 300);
+    new Text(this, 'Score', 48, height - 300);
 
-    new MenuButton(this, config.width / 2, config.height / 2 + 250, 'Menu', 'Menu');
+    new MenuButton(this, config.width / 2, height + 250, 'Menu', 'Menu');
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {

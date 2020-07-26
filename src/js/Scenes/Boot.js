@@ -19,7 +19,9 @@ export default class BootScene extends Phaser.Scene {
 
   create() {
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
-    new Text(this, 'Booting...', 48, config.height / 2 - 200);
+    let height = config.height / 2;
+    height -= 200;
+    new Text(this, 'Booting...', 48, height);
     this.scene.start('Preloader');
   }
 }

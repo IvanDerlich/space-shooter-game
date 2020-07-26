@@ -39,7 +39,9 @@ export default class PreloaderScene extends Phaser.Scene {
 
   preload() {
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
-    new Text(this, 'Loading...', 48, config.height / 2 - 200);
+
+    const height = config.height / 2;
+    new Text(this, 'Loading...', 48, height - 200);
 
     this.load.image('buttonOver', buttonOver);
     this.load.image('buttonOut', buttonOut);

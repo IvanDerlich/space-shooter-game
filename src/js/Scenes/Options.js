@@ -52,7 +52,9 @@ export default class OptionsScene extends Phaser.Scene {
 
     this.updateAudio();
 
-    new MenuButton(this, config.width / 2, config.height / 2 + 100, 'Menu', 'Menu');
+    const height = config.height / 2;
+
+    new MenuButton(this, config.width / 2, height + 100, 'Menu', 'Menu');
 
     this.updateAudio();
 

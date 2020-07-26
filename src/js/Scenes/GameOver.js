@@ -19,9 +19,10 @@ export default class SceneGameOver extends Phaser.Scene {
       btnDown: this.sound.add('sndBtnDown'),
     };
 
-    new MenuButton(this, config.width / 2, config.height / 2, 'Restart', 'Play');
-    new MenuButton(this, config.width / 2, config.height / 2 + 100, 'Menu', 'Menu');
-    new MenuButton(this, config.width / 2, config.height / 2 + 200, '+Score', 'Score');
+    const height = config.height / 2;
+    new MenuButton(this, config.width / 2, height / 2, 'Restart', 'Play');
+    new MenuButton(this, config.width / 2, height + 100, 'Menu', 'Menu');
+    new MenuButton(this, config.width / 2, height + 200, '+Score', 'Score');
 
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
     new Text(this, 'GAME OVER', 48, config.height / 2 - 200);
