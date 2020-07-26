@@ -24,7 +24,7 @@ export default class InstructionsScene extends Phaser.Scene {
       btnDown: this.sound.add('sndBtnDown'),
     };
 
-    const height = config.height / 2,
+    const height = config.height / 2;
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
     new Text(this, 'INSTRUCTIONS', 48, height - 200);
     new Text(this, 'w,a,s,d to move', 24, height - 100);

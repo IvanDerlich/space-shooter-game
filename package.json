@@ -20,7 +20,7 @@
     "watch": "webpack --mode production --watch",
     "w": "webpack --mode production --watch",
     "start": "node index.js",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "engines": {
     "node": "10.x",
