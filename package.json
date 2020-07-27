@@ -1,8 +1,8 @@
 {
   "name": "011-capstone-shooter-game",
   "version": "1.0.0",
-  "description": "Following [this](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27) tutorial.",
-  "main": "src/index.js",
+  "description": "Following",
+  "main": "src/js/index.js",
   "scripts": {
     "deploy": "webpack --mode production && surge /home/niro/Documents/Microverse/Main-Curriculm/011-Capstone-Shooter-Game/dist space-shooter-ivanderlich.surge.sh && xdg-open https://space-shooter-ivanderlich.surge.sh",
     "d": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
@@ -19,7 +19,7 @@
     "s": "webpack-dev-server --mode development --open",
     "watch": "webpack --mode production --watch",
     "w": "webpack --mode production --watch",
-    "start": "node index.js",
+    "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "engines": {

@@ -26,6 +26,14 @@ Build the project using a node script:
 
       npm start     
 
+## Enhancements to the game
+
+[Here](https://github.com/IvanDerlich/space-shooter-game/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+## Report a bug
+
+[Here](https://github.com/IvanDerlich/space-shooter-game/issues/new)
+
 ## Development Process
 
 This game was made following [This](https://www.notion.so/Shooter-game-203e819041c7486bb36f9e65faecba27) guide.

@@ -20,7 +20,7 @@ export default class SceneGameOver extends Phaser.Scene {
     };
 
     const height = config.height / 2;
-    new MenuButton(this, config.width / 2, height / 2, 'Restart', 'Play');
+    new MenuButton(this, config.width / 2, height, 'Restart', 'Play');
     new MenuButton(this, config.width / 2, height + 100, 'Menu', 'Menu');
     new MenuButton(this, config.width / 2, height + 200, '+Score', 'Score');
 
