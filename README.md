@@ -26,9 +26,13 @@ Build the project using a node script:
 
       npm start     
 
-## Enhancements to the game
+## Enhancements to the game / Future features
 
 [Here](https://github.com/IvanDerlich/space-shooter-game/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+## API info
+
+## Features
 
 ## Report a bug
 

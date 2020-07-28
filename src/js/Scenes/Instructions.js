@@ -1,6 +1,7 @@
 /* eslint-disable no-new */
 /* eslint-disable no-undef */
 /* eslint-disable  import/no-unresolved */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import 'phaser';
 import config from '../Objects/config';

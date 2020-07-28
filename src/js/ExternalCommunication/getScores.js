@@ -1,4 +1,6 @@
 /* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-extraneous-dependencies */
+
 import fetch from 'node-fetch';
 
 export default (gameId) => {
