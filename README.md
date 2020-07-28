@@ -6,7 +6,7 @@ Humanity is under attack by space creatures and it needs you and only you to sav
 ![Video/gif](docs/game.gif) <br>
 ![Picture 1](docs/index.png) <br>
 
-## [Check the live version of this game](http://ivanderlich-phaser-tutorial.surge.sh/)
+## [Check the live version of this game](https://tranquil-atoll-01391.herokuapp.com/)
 
 ## Instalation
 
