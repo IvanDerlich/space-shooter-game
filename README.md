@@ -3,8 +3,13 @@
 Humanity is under attack by space creatures and it needs you and only you to save it
 
 ## Demo
-![Video/gif](docs/game.gif) <br>
-![Picture 1](docs/index.png) <br>
+
+![Picture 1](docs/1.png) <br>
+![Picture 1](docs/2.png) <br>
+![Picture 1](docs/3.png) <br>
+![Picture 1](docs/4.png) <br>
+![Picture 1](docs/5.png) <br>
+![Video/gif](docs/1.gif) <br>
 
 ## [Check the live version of this game](https://tranquil-atoll-01391.herokuapp.com/)
 
@@ -24,7 +29,7 @@ Install project dependencies:
       
 Build the project using a node script:
 
-      npm start     
+      npm start
 
 ## Enhancements to the game / Future features
 
@@ -50,7 +55,7 @@ This game was made following [This](https://www.notion.so/Shooter-game-203e81904
 ## Technologies used
 
   - Webpack
-  - NPM  
+  - NPM
   - [Phaser](https://phaser.io/)
 
 ## Author
