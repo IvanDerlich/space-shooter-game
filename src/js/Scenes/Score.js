@@ -24,16 +24,19 @@ export default class InstructionsScene extends Phaser.Scene {
   }
 
   create() {
-    const height = config.height / 2;
+    this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
+    this.fetching = new Text(this, 'Insert Username and press enter...', 20, height - 200);
+    //document.getElementById('utext').style.display = 'block';
 
     this.score = this.sys.game.globals.score;
-
-    this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
-
-    this.fetching = new Text(this, 'Insert Username...', 20, height - 200);
-    userNameInput(this);
+    
+    //userNameInput(this);
+    
     this.fetching.setText('Posting Score...');
     const gameId = 'WQw8aJXQ7oC0nuqYBROD';
+    
+
+
     setScore(gameId, this.userName, this.score)
       .then(() => {
         this.fetching.setText('Fetching Scores...');
@@ -51,6 +54,7 @@ export default class InstructionsScene extends Phaser.Scene {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
     };
+    
     new Text(this, 'Score', 48, height - 300);
 
     new MenuButton(this, config.width / 2, height + 250, 'Menu', 'Menu');

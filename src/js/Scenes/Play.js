@@ -197,6 +197,11 @@ export default class SceneMain extends Phaser.Scene {
             enemy.onDestroy();
           }
           this.sys.game.globals.score -= 10;
+          if (this.sys.game.globals.score < 1
+            && !this.player.getData('isDead')) {
+            this.player.explode(false);
+            this.player.onDestroy();
+          }
           enemy.destroy();
         }
       }
@@ -226,6 +231,11 @@ export default class SceneMain extends Phaser.Scene {
         || laser.y > this.game.config.height + laser.displayHeight) {
         if (laser) {
           this.sys.game.globals.score -= 2;
+          if (this.sys.game.globals.score < 1
+            && !this.player.getData('isDead')) {
+            this.player.explode(false);
+            this.player.onDestroy();
+          }
           laser.destroy();
         }
       }

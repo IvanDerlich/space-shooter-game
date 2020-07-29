@@ -18,6 +18,16 @@ export default class BootScene extends Phaser.Scene {
   }
 
   create() {
+    const logo = this.add.image(400, 150, 'logo');
+    this.tweens.add({
+      targets: logo,
+      y: 450,
+      duration: 2000,
+      ease: 'Power2',
+      yoyo: true,
+      loop: -1,
+    });
+
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
     let height = config.height / 2;
     height -= 200;
