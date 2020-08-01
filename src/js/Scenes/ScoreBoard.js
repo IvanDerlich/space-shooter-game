@@ -9,13 +9,11 @@ import MenuButton from '../Objects/MenuButton';
 import Text from '../Objects/Text';
 import menuMusic from '../../../content/Music/Menu.wav';
 
-import userNameInput from '../ExternalCommunication/usernameInput';
-import setScore from '../ExternalCommunication/setScore';
 import getScores from '../ExternalCommunication/getScores';
 
 export default class InstructionsScene extends Phaser.Scene {
   constructor() {
-    super('Score');
+    super('ScoreBoard');
     this.userName = null;
   }
 
@@ -24,38 +22,27 @@ export default class InstructionsScene extends Phaser.Scene {
   }
 
   create() {
+    const height = config.height / 2;
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
-    this.fetching = new Text(this, 'Insert Username and press enter...', 20, height - 200);
-    //document.getElementById('utext').style.display = 'block';
+    this.text = new Text(this, 'Fetching Scores...', 20, height - 200);
 
-    this.score = this.sys.game.globals.score;
-    
-    //userNameInput(this);
-    
-    this.fetching.setText('Posting Score...');
     const gameId = 'WQw8aJXQ7oC0nuqYBROD';
-    
-
-
-    setScore(gameId, this.userName, this.score)
-      .then(() => {
-        this.fetching.setText('Fetching Scores...');
-        return getScores(gameId);
-      })
+    getScores(gameId)
       .then(scores => {
         this.update();
-        this.fetching.destroy();
+        this.text.destroy();
         for (let i = 0; i < 10; i += 1) {
           new Text(this, `${i + 1} - ${scores[i].user}: ${scores[i].score}`, 20, height - 200 + 40 * i);
         }
         this.update();
       });
+
     this.sfx = {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
     };
-    
-    new Text(this, 'Score', 48, height - 300);
+
+    new Text(this, 'Scores', 48, height - 300);
 
     new MenuButton(this, config.width / 2, height + 250, 'Menu', 'Menu');
 

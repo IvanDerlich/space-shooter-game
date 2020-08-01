@@ -26,21 +26,21 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   create() {
-    
-    this.scene.start('Score');
+    this.scene.start('SetScore');
     this.sfx = {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
     };
 
     const height = config.height / 2;
-    new MenuButton(this, config.width / 2, height - 100, 'Play', 'Play');
-    new MenuButton(this, config.width / 2, height, 'Options', 'Options');
-    new MenuButton(this, config.width / 2, height + 100, 'Credits', 'Credits');
-    new MenuButton(this, config.width / 2, height + 200, 'How to ...', 'Instructions');
+    new MenuButton(this, config.width / 2, height - 150, 'Play', 'Play');
+    new MenuButton(this, config.width / 2, height - 50, 'Options', 'Options');
+    new MenuButton(this, config.width / 2, height + 50, 'Credits', 'Credits');
+    new MenuButton(this, config.width / 2, height + 150, 'How to ...', 'Instructions');
+    new MenuButton(this, config.width / 2, height + 250, 'Scores', 'Score');
 
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
-    new Text(this, 'SPACE SHOOTER', 48, config.width / 2 - 150);
+    new Text(this, 'SPACE SHOOTER', 48, config.width / 2 - 200);
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {

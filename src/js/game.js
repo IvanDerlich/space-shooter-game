@@ -5,6 +5,7 @@ import 'phaser';
 
 import config from './Objects/config';
 
+import SceneSetScore from './Scenes/SetScore';
 import SceneBoot from './Scenes/Boot';
 import ScenePreloader from './Scenes/Preloader';
 import SceneMenu from './Scenes/Menu';
@@ -13,7 +14,7 @@ import ScenePlay from './Scenes/Play';
 import SceneInstructions from './Scenes/Instructions';
 import SceneCredits from './Scenes/Credits';
 import SceneOptions from './Scenes/Options';
-import SceneScore from './Scenes/Score';
+import SceneScoreBoard from './Scenes/ScoreBoard';
 import globals from './Objects/globals';
 
 class Game extends Phaser.Game {
@@ -29,7 +30,8 @@ class Game extends Phaser.Game {
     this.scene.add('Play', ScenePlay);
     this.scene.add('GameOver', SceneGameOver);
     this.scene.add('Options', SceneOptions);
-    this.scene.add('SceneScore', SceneScore);
+    this.scene.add('SceneScoreBoard', SceneScoreBoard);
+    this.scene.add('SetScore', SceneSetScore);
 
     this.scene.start('Boot');
   }

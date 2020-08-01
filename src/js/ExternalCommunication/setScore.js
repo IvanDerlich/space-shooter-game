@@ -8,7 +8,9 @@ export default (gameId, user, score) => {
     user,
     score,
   };
-  const queryUrl = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`;
+  const queryUrl = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`;  
+
+  console.log(JSON.stringify(data));
 
   return fetch(queryUrl, {
     method: 'POST',
