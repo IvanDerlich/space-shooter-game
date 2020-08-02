@@ -8,7 +8,6 @@ import config from '../Objects/config';
 import setScore from '../ExternalCommunication/setScore';
 import ScrollingBackground from '../Entities/ScrollingBackground';
 
-
 export default class AskPlayerNameScene extends Phaser.Scene {
   constructor() {
     super('SetScore');
@@ -21,12 +20,15 @@ export default class AskPlayerNameScene extends Phaser.Scene {
 
     this.text = new Text(this, 'Insert Username...', 20, height - 200);
 
+    this.input.keyboard.clearCaptures();
+
+
     const input = document.getElementById('user-name-input');
     input.classList.remove('hide');
 
     this.button = this.add.image(130, 300, 'buttonOut');
     this.button.setInteractive();
-    this.buttonText = this.add.text(0, 0, "SEND", { fontSize: '32px', fill: '#fff' });
+    this.buttonText = this.add.text(0, 0, 'SEND', { fontSize: '32px', fill: '#fff' });
     this.button.x = 230;
     this.button.y = 300;
     this.buttonText.x = 195;
@@ -49,7 +51,7 @@ export default class AskPlayerNameScene extends Phaser.Scene {
       } else {
         input.classList.add('hide');
         this.text.x = 120;
-        this.text.setText("Posting Score...");
+        this.text.setText('Posting Score...');
         this.button.destroy();
         this.buttonText.destroy();
         const gameId = 'WQw8aJXQ7oC0nuqYBROD';

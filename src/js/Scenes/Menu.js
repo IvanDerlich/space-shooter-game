@@ -26,7 +26,7 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('SetScore');
+    //this.scene.start('SetScore');
     this.sfx = {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
@@ -37,7 +37,7 @@ export default class SceneMainMenu extends Phaser.Scene {
     new MenuButton(this, config.width / 2, height - 50, 'Options', 'Options');
     new MenuButton(this, config.width / 2, height + 50, 'Credits', 'Credits');
     new MenuButton(this, config.width / 2, height + 150, 'How to ...', 'Instructions');
-    new MenuButton(this, config.width / 2, height + 250, 'Scores', 'Score');
+    new MenuButton(this, config.width / 2, height + 250, 'Scores', 'ScoreBoard');
 
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
     new Text(this, 'SPACE SHOOTER', 48, config.width / 2 - 200);
