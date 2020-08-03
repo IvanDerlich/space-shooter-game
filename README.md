@@ -46,7 +46,7 @@ This game was made following [This](https://www.notion.so/Shooter-game-203e81904
 
   - Microverse.
   - The people that created the technologies I'm using listed below.
-  - Code reviewers that participated in [this](https://github.com/IvanDerlich/space-shooter-game/pulls) pull request.
+  - Code reviewers
 
 ## Technologies used
 
