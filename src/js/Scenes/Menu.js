@@ -56,6 +56,8 @@ export default class SceneMainMenu extends Phaser.Scene {
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
+    const loadingMessage = document.getElementById('loading');
+    loadingMessage.classList.add('hide');
   }
 
   update() {

@@ -78,7 +78,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.audio('sndExplode1', sndExplode1);
     this.load.audio('sndLaser', sndLaser);
     const loadingMessage = document.getElementById('loading');
-    //loadingMessage.classList.add('hide');
+    loadingMessage.classList.add('hide');
     this.scene.start('Menu');
   }
 
