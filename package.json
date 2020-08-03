@@ -4,28 +4,11 @@
   "description": "Following",
   "main": "src/js/index.js",
   "scripts": {
-    "surge": "webpack --mode production && surge /home/niro/Documents/Microverse/Main-Curriculm/011-Capstone-Shooter-Game/dist space-shooter-ivanderlich.surge.sh && xdg-open https://space-shooter-ivanderlich.surge.sh",
-    "d": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh && xdg-open https://ivanderlich-space-shooter.surge.sh",
-    "dn": "webpack --mode production && surge --project './dist/' -- domain ivanderlich-space-shooter.surge.sh",
-    "build2": "webpack --mode production && xdg-open ./dist/index.html",
-    "b": "webpack --mode production && xdg-open ./dist/index.html",
-    "bn": "webpack --mode production",
-    "dev": "webpack --mode development && xdg-open ./dist/index.html",
-    "q": "webpack --mode development && xdg-open ./dist/index.html",
-    "qn": "webpack --mode development",
     "test": "jest  --detectOpenHandles",
-    "t": "jest",
-    "start2": "webpack-dev-server --mode development --open",
-    "s": "webpack-dev-server --mode development --open",
-    "watch": "webpack --mode production --watch",
-    "w": "webpack --mode production --watch",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production"
-  },
-  "engines": {
-    "node": "10.x",
-    "npm": "6.x"
-  },
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/IvanDerlich/space-shooter-game.git"
