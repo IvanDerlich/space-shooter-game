@@ -14,7 +14,7 @@ Humanity is under attack by space creatures and it needs you and only you to sav
 
 ## [Youtube Video](https://www.youtube.com/watch?v=0E-0bb0-IFU)
 
-## [Check the live version of this game](http://ivanderlich-space-shooter-game.surge.sh/)
+## [Live version](http://ivanderlich-space-shooter-game.surge.sh/)
 
 ## Instalation
 
@@ -34,17 +34,9 @@ Build the project using a node script:
 
       npm start
 
-## Enhancements to the game / Future features
+## [Future features](https://github.com/IvanDerlich/space-shooter-game/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
 
-[Here](https://github.com/IvanDerlich/space-shooter-game/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
-
-## API info
-
-## Features
-
-## Report a bug
-
-[Here](https://github.com/IvanDerlich/space-shooter-game/issues/new)
+## [Report a bug](https://github.com/IvanDerlich/space-shooter-game/issues/new)
 
 ## Development Process
 
