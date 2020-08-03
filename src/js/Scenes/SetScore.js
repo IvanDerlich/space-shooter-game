@@ -21,8 +21,6 @@ export default class AskPlayerNameScene extends Phaser.Scene {
     this.text = new Text(this, 'Insert Username...', 20, height - 200);
 
     this.input.keyboard.clearCaptures();
-
-
     const input = document.getElementById('user-name-input');
     input.classList.remove('hide');
 
