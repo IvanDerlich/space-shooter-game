@@ -40,7 +40,7 @@ export default class SceneMainMenu extends Phaser.Scene {
     new MenuButton(this, config.width / 2, height + 250, 'Scores', 'ScoreBoard');
 
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
-    new Text(this, 'SPACE SHOOTER', 48, config.width / 2 - 200);
+    new Text(this, 'SPACE SHOOTER', 48, (config.width / 2) - 200);
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {
@@ -56,8 +56,6 @@ export default class SceneMainMenu extends Phaser.Scene {
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
-    const loadingMessage = document.getElementById('loading');
-    loadingMessage.classList.add('hide');
   }
 
   update() {

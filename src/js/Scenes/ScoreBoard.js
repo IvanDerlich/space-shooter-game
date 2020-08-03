@@ -32,7 +32,7 @@ export default class InstructionsScene extends Phaser.Scene {
         this.update();
         this.text.destroy();
         for (let i = 0; i < 10; i += 1) {
-          new Text(this, `${i + 1} - ${scores[i].user}: ${scores[i].score}`, 20, height - 200 + 40 * i);
+          new Text(this, `${i + 1} - ${scores[i].user}: ${scores[i].score}`, 20, (height - 200) + (40 * i));
         }
         this.update();
       });

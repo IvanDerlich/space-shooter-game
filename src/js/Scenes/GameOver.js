@@ -25,8 +25,8 @@ export default class SceneGameOver extends Phaser.Scene {
     new MenuButton(this, config.width / 2, height + 200, '+Score', 'SetScore');
 
     this.zone = this.add.zone(config.width / 2, config.height / 2, config.width, config.height);
-    new Text(this, 'GAME OVER', 48, config.height / 2 - 200);
-    new Text(this, `SCORE: ${this.sys.game.globals.score}`, 48, config.height / 2 - 100);
+    new Text(this, 'GAME OVER', 48, (config.height / 2) - 200);
+    new Text(this, `SCORE: ${this.sys.game.globals.score}`, 48, (config.height / 2) - 100);
 
     this.keyW = 'w';
     this.keyS = 's';

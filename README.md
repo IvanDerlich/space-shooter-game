@@ -11,7 +11,7 @@ Humanity is under attack by space creatures and it needs you and only you to sav
 ![Picture 1](docs/5.png) <br>
 ![Video/gif](docs/1.gif) <br>
 
-## [Check the live version of this game](http://ivanderlich-space-shooter-game.surge.sh/)
+## [Check the live version of this game]()
 
 ## Instalation
 
