@@ -7,7 +7,7 @@ jest.setTimeout(180000);
 //   return new Promise(resolve => setTimeout(resolve, ms));
 // }
 
-it('Get Scores', async () => {
+xit('Get Scores', async () => {
   const gameId = 'WQw8aJXQ7oC0nuqYBROD';
   const scores = await getScores(gameId);
   expect(scores).toBeInstanceOf(Array);
@@ -24,6 +24,8 @@ it('Set one score and see if its included and if legth increased', async () => {
   const score = -5555;
 
   const scoresBefore = await getScores(gameId);
+
+  expect(scoresBefore).toBeInstanceOf(Array);
 
   await setScore(gameId, playerName, score);
 

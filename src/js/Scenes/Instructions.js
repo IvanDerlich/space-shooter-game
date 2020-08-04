@@ -31,7 +31,9 @@ export default class InstructionsScene extends Phaser.Scene {
     new Text(this, 'w,a,s,d to move', 24, height - 100);
     new Text(this, 'space to shoot', 24, height);
 
-    new MenuButton(this, config.width / 2, height + 100, 'Menu', 'Menu');
+    new MenuButton(this, config.width / 2, height + 250, 'Menu', 'Menu');
+    new MenuButton(this, (config.width / 2) + 110, height + 150, 'Next', 'Menu');
+    new MenuButton(this, (config.width / 2) - 110, height + 150, 'Prev', 'Menu');
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {
