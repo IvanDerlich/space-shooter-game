@@ -31,7 +31,7 @@ import buttonOut from '../../../content/blue_button03.png';
 const iDiv = document.createElement('div');
 iDiv.id = 'loading';
 iDiv.className = 'loading';
-iDiv.innerHTML = 'Loading. Fun is near...';
+iDiv.innerHTML = 'Loading. Fun is coming...';
 document.getElementsByTagName('body')[0].appendChild(iDiv);
 
 export default class PreloaderScene extends Phaser.Scene {

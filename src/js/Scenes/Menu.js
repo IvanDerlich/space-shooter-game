@@ -26,7 +26,6 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   create() {
-    //this.scene.start('Instructions');
     this.sfx = {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),

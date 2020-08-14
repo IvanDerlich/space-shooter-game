@@ -28,7 +28,7 @@ Humanity is under attack by space creatures and it needs you and only you to sav
 
 ## [Youtube Video](https://www.youtube.com/watch?v=0E-0bb0-IFU)
 
-## [Live version](http://ivanderlich-space-shooter-game.surge.sh/)
+## [Live version](https://ivanderlich-space-shooter.netlify.app/)
 
 ## Objective of the game
 
