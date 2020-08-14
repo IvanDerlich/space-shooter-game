@@ -4,15 +4,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import 'phaser';
-import config from '../Objects/config';
-import ScrollingBackground from '../Entities/ScrollingBackground';
-import MenuButton from '../Objects/MenuButton';
-import menuMusic from '../../../content/Music/Menu.wav';
-import Text from '../Objects/Text';
+import config from '../../Objects/config';
+import ScrollingBackground from '../../Entities/ScrollingBackground';
+import MenuButton from '../../Objects/MenuButton';
+import menuMusic from '../../../../content/Music/Menu.wav';
+import Text from '../../Objects/Text';
 
 export default class InstructionsScene extends Phaser.Scene {
   constructor() {
-    super('Instructions2');
+    super('Instructions1');
   }
 
   preload() {
@@ -31,8 +31,8 @@ export default class InstructionsScene extends Phaser.Scene {
     new Text(this, 'w,a,s,d to move', 24, height - 100);
     new Text(this, 'space to shoot', 24, height);
 
-    new MenuButton(this, config.width / 2, height + 200, 'Menu', 'Menu');
-    new MenuButton(this, (config.width / 2) + 100, height + 100, 'Next', 'Menu');
+    new MenuButton(this, config.width / 2, height + 250, 'Menu', 'Menu');
+    new MenuButton(this, (config.width / 2) + 110, height + 150, 'Next', 'Instructions2');
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {

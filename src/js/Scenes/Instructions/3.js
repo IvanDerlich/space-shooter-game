@@ -4,11 +4,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 
 import 'phaser';
-import config from '../Objects/config';
-import ScrollingBackground from '../Entities/ScrollingBackground';
-import MenuButton from '../Objects/MenuButton';
-import menuMusic from '../../../content/Music/Menu.wav';
-import Text from '../Objects/Text';
+import config from '../../Objects/config';
+import ScrollingBackground from '../../Entities/ScrollingBackground';
+import MenuButton from '../../Objects/MenuButton';
+import menuMusic from '../../../../content/Music/Menu.wav';
+import Text from '../../Objects/Text';
 
 export default class InstructionsScene extends Phaser.Scene {
   constructor() {
@@ -27,12 +27,13 @@ export default class InstructionsScene extends Phaser.Scene {
 
     const height = config.height / 2;
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
-    new Text(this, 'INSTRUCTIONS', 48, height - 200);
-    new Text(this, 'w,a,s,d to move', 24, height - 100);
-    new Text(this, 'space to shoot', 24, height);
+    new Text(this, 'If your score is negative, ', 24, height - 250);
+    new Text(this, ' you die die.', 24, height - 150);
+    new Text(this, 'If you get killed by any enemy,', 24, height - 50);
+    new Text(this, 'you better cry cry.', 24, height + 50);
 
-    new MenuButton(this, config.width / 2, height + 200, 'Menu', 'Menu');
-    new MenuButton(this, (config.width / 2) + 100, height + 100, 'Next', 'Menu');
+    new MenuButton(this, config.width / 2, height + 250, 'Menu', 'Menu');
+    new MenuButton(this, (config.width / 2) - 110, height + 150, 'Prev', 'Instructions2');
 
     this.backgrounds = [];
     for (let i = 0; i < 5; i += 1) {

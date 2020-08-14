@@ -1,5 +1,5 @@
-import setScore from '../src/js/ExternalCommunication/setScore';
-import getScores from '../src/js/ExternalCommunication/getScores';
+import setScore from '../../src/js/ExternalCommunication/setScore';
+import getScores from '../../src/js/ExternalCommunication/getScores';
 
 jest.setTimeout(180000);
 
@@ -13,7 +13,7 @@ xit('Get Scores', async () => {
   expect(scores).toBeInstanceOf(Array);
 });
 
-it('Set one score and see if its included and if legth increased', async () => {
+xit('Set one score and see if its included and if legth increased', async () => {
   const rand = Math.floor(
     (Math.random() * 100000000) + 1,
   );

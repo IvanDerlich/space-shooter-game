@@ -26,7 +26,7 @@ export default class SceneMainMenu extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start('Instructions');
+    //this.scene.start('Instructions');
     this.sfx = {
       btnOver: this.sound.add('sndBtnOver'),
       btnDown: this.sound.add('sndBtnDown'),
@@ -36,7 +36,7 @@ export default class SceneMainMenu extends Phaser.Scene {
     new MenuButton(this, config.width / 2, height - 150, 'Play', 'Play');
     new MenuButton(this, config.width / 2, height - 50, 'Options', 'Options');
     new MenuButton(this, config.width / 2, height + 50, 'Credits', 'Credits');
-    new MenuButton(this, config.width / 2, height + 150, 'How to ...', 'Instructions');
+    new MenuButton(this, config.width / 2, height + 150, 'How To', 'Instructions1');
     new MenuButton(this, config.width / 2, height + 250, 'Scores', 'ScoreBoard');
 
     this.zone = this.add.zone(config.width / 2, height, config.width, config.height);
@@ -56,6 +56,8 @@ export default class SceneMainMenu extends Phaser.Scene {
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
+    const canvas = document.querySelector('canvas');
+    canvas.classList.remove('hide');
   }
 
   update() {
