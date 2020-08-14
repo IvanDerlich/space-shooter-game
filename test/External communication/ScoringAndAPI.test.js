@@ -13,7 +13,7 @@ xit('Get Scores', async () => {
   expect(scores).toBeInstanceOf(Array);
 });
 
-xit('Set one score and see if its included and if legth increased', async () => {
+it('Set one score and see if its included and if legth increased', async () => {
   const rand = Math.floor(
     (Math.random() * 100000000) + 1,
   );
