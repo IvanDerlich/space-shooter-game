@@ -2,6 +2,7 @@
 /* eslint-disable import/no-unresolved */
 
 import 'phaser';
+import '../styles/main.scss';
 
 import config from './Objects/config';
 
