@@ -2,19 +2,19 @@
   display: none;
 }
 
-.input {      
+.input {
   position: absolute;
   top: 200px;
   left: 110px;
 }
 
-.button{
+.button {
   position: absolute;
   top: 300px;
   left: 150px;
 }
 
-.loading{
+.loading {
   position: absolute;
   left: 150px;
 }
