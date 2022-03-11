@@ -2,7 +2,7 @@
 
 ## Game Topic
 
-Humanity is under attack by space creatures and it needs you and only you to save it
+<p id="description-space-shooted"> Humanity is under attack by space creatures and it needs you and only you to save it <p>
 
 ## Game Rules
 
@@ -24,7 +24,7 @@ Humanity is under attack by space creatures and it needs you and only you to sav
 
 ![Picture 1](docs/5.png) <br>
 
-![Video/gif](docs/1.gif) <br>
+<img src="docs/1.gif" id="main-image-space-shooter" />
 
 ## [Youtube Video](https://www.youtube.com/watch?v=0E-0bb0-IFU)
 
