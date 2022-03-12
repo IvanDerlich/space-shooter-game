@@ -2,7 +2,7 @@
 
 ## Game Topic
 
-<p id="description-space-shooter-game"> Humanity is under attack by space creatures and it needs you and only you to save it <p>
+<p id="description-space-shooter-game"> A space shooter like old times arcade games. Humanity is under attack by space creatures and it needs you and only you to save it <p>
 
 ## Game Rules
 
