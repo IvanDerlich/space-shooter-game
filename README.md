@@ -1,6 +1,6 @@
 # Space Shooter
 
-## Game Topic
+## Description
 
 <p id="description-space-shooter-game"> A space shooter like old times arcade games. Humanity is under attack by space creatures and it needs you and only you to save it <p>
 
