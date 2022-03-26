@@ -128,11 +128,11 @@ I made this game following [This](https://www.notion.so/Shooter-game-203e819041c
 
 ## Technologies used
 
- - Webpack
-
- - NPM
-
- - [Phaser](https://phaser.io/)
+<ul id="tech-list-space-shooter-game">
+     <li>Webpack</li>
+     <li>Phaser</li>
+     <li>NPM</li>
+</ul>
 
 ## Author
 
