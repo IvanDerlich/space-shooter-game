@@ -51,7 +51,7 @@
     "html-webpack-plugin": "^4.3.0",
     "jest": "^26.4.0",
     "jest-canvas-mock": "^2.2.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
